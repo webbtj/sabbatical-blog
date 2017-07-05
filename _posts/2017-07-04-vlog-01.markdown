@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Vlog #1 - Getting Started"
+date:   2017-07-04
+course_link: https://www.udemy.com/unity-game-development-make-professional-3d-games/
+youtube_slug: WMY84fmzNbU
+vlog_title: Sabbatical Vlog Ep. 1 - 4th of July, 2017
+project_slug: p00
+---
+So, today was day one of my sabbatical and I have to admit, I didn't think I'd
+have anything "sharable" after just one day, especially given that day one
+included a 4+ hour "intro" to C#. I managed to get a simple game up and running
+and deployed for web within the first couple of hours. It's a pretty basic
+"game", using the arrow keys or the WASD keys to control a pumpkin rolling
+uphill towards a goal (the gate) while avoiding monsters. Collision with the
+monsters or the goal stops the game, as does falling off the edge. So it is
+obviously proof of concept, basically the Hello World™ of Unity applications.
+
+So check out the Vlog to hear all about it, then load the game below to try it
+out for yourself (again very rudimentary so restarting the game requires a page
+refresh).

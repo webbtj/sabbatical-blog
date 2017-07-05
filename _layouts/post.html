@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                {{ page.date | date: date_format }}
+            </time>
+            {% if page.author %}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+            {% endif %}
+            {% if page.course_link %}
+                • 
+                <span>
+                    <a href="{{ page.course_link}}" target="_blank">
+                        Check out the course for yourself
+                    </a>
+                </span>
+            {% endif %}
+        </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    {% if page.youtube_slug %}
+        <h2>{{ page.vlog_title }}</h2>
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/{{ page.youtube_slug }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+
+    {% if page.project_slug %}
+        <a href="#game" onclick="
+            this.innerText = 'Reload Game';
+            var game = document.getElementById('game-frame');
+            game.width = 800;
+            game.height = 550;
+            game.src = '/project-assets/{{page.project_slug}}';
+        ">Load Game</a> (click game to give it focus)
+        <br>
+        <a name="game"></a>
+        <iframe id="game-frame" width="0" height="0" frameborder="0" allowfullscreen />
+    {% endif %}
+</article>
